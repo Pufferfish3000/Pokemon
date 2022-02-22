@@ -7,6 +7,7 @@ public class California extends Pokemon implements Ghost
 	public California()
 	{
 		super(796, "California");
+		setup(30, false);
 	}
 	public California(String name)
 	{
@@ -15,6 +16,7 @@ public class California extends Pokemon implements Ghost
 	public California(int number, String name)
 	{
 		super(number, name);
+		setup(30, false);
 	}
 	public int raiseTaxes()
 	{

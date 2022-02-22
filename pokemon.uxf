@@ -22,6 +22,7 @@
 + Pokemon (int, String) : constructor
 + getTypes() : String[]
 + toString() : String
++ setup()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -50,13 +51,13 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
+      <x>308</x>
       <y>140</y>
-      <w>28</w>
+      <w>21</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>20.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -83,8 +84,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>504</x>
-      <y>294</y>
+      <x>469</x>
+      <y>301</y>
       <w>98</w>
       <h>21</h>
     </coordinates>
@@ -116,24 +117,24 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>427</x>
+      <x>441</x>
       <y>140</y>
-      <w>35</w>
+      <w>21</w>
       <h>49</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>30.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>448</x>
       <y>189</y>
-      <w>91</w>
-      <h>119</h>
+      <w>84</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;100.0;50.0;100.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -144,7 +145,7 @@
       <h>119</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0;60.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0;60.0;110.0;60.0;150.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
