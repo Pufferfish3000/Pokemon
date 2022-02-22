@@ -1,8 +1,8 @@
 package poke.view;
 
 import poke.controller.*;
-import javax.swing.*;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class PokePanel extends JPanel 
