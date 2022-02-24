@@ -31,8 +31,16 @@ public class IOController
 		return pokeList;
 	}
 	
-	public static void saveData()
+	public static void saveData(String dataFile, ArrayList<Pokemon> pokemonList, PokeFrame frame)
 	{
-		
+		try(FileOutputStream outputStream = new FileOutputStream(dataFile);
+			ObjectOutputStream output = new ObjectOutputStream(outputStream))
+		{
+			output.writeObject(pokemonList);
+		}
+		catch(IOException saveError)
+		{
+			JOptionPane.showMessageDialog(frame, saveError.getMessage(), "Your computer could not save :(", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 }
