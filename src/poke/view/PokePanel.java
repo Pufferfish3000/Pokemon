@@ -15,6 +15,7 @@ public class PokePanel extends JPanel
 	private JTextField healthField;
 	private JTextField numberField;
 	private JTextArea typeArea;
+	private JScrollPane typePane;
 	private JCheckBox evolveBox;
 	
 	private JLabel imageLabel;
@@ -29,12 +30,17 @@ public class PokePanel extends JPanel
 		this.layout = new SpringLayout();
 		
 		this.fieldPanel = new JPanel(new GridLayout(0,1));
+		layout.putConstraint(SpringLayout.NORTH, fieldPanel, 25, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.WEST, fieldPanel, -300, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.SOUTH, fieldPanel, -25, SpringLayout.SOUTH, this);
+		layout.putConstraint(SpringLayout.EAST, fieldPanel, -25, SpringLayout.EAST, this);
+		
 		this.nameField = new JTextField("Pokemon Name");
 		this.numberField = new JTextField("##");
 		this.healthField = new JTextField("###");
-		this.typeArea = new JTextArea(10,10);
+		this.typeArea = new JTextArea();
+		this.typePane = new JScrollPane();
 		this.evolveBox = new JCheckBox();
-		
 		this.imageLabel = new JLabel("PlaceHolder text");
 		this.pokemonImage = new ImageIcon();
 		this.pokedexSelector = new JComboBox<String>();
@@ -61,16 +67,22 @@ public class PokePanel extends JPanel
 	{
 		this.setLayout(layout);
 		this.setBackground(Color.RED);
-		this.setSize(800,600);
+		this.setPreferredSize(new Dimension(800,600));
 		
 		fieldPanel.add(nameField);
 		fieldPanel.add(numberField);
 		fieldPanel.add(healthField);
 		fieldPanel.add(evolveBox);
-		fieldPanel.add(typeArea);
 		
 		this.add(fieldPanel);
 		this.add(imageLabel);
 		this.add(pokedexSelector);
+		
+		typeArea.setEditable(false);
+		typeArea.setLineWrap(true);
+		typeArea.setWrapStyleWord(true);
+		typePane.setViewportView(typeArea);
+		typePane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		typePane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 	}
 }
