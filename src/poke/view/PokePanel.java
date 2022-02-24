@@ -30,18 +30,16 @@ public class PokePanel extends JPanel
 		this.layout = new SpringLayout();
 		
 		this.fieldPanel = new JPanel(new GridLayout(0,1));
-		layout.putConstraint(SpringLayout.NORTH, fieldPanel, 25, SpringLayout.NORTH, this);
-		layout.putConstraint(SpringLayout.WEST, fieldPanel, -300, SpringLayout.EAST, this);
-		layout.putConstraint(SpringLayout.SOUTH, fieldPanel, -25, SpringLayout.SOUTH, this);
-		layout.putConstraint(SpringLayout.EAST, fieldPanel, -25, SpringLayout.EAST, this);
 		
 		this.nameField = new JTextField("Pokemon Name");
-		this.numberField = new JTextField("##");
-		this.healthField = new JTextField("###");
+		this.numberField = new JTextField("Pokedex Number");
+		this.healthField = new JTextField("Pokemon Health");
 		this.typeArea = new JTextArea();
 		this.typePane = new JScrollPane();
-		this.evolveBox = new JCheckBox();
-		this.imageLabel = new JLabel("PlaceHolder text");
+		this.evolveBox = new JCheckBox("Can Evolve?");
+		this.imageLabel = new JLabel("Image And Name");
+		layout.putConstraint(SpringLayout.WEST, imageLabel, 150, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.EAST, fieldPanel);
 		this.pokemonImage = new ImageIcon();
 		this.pokedexSelector = new JComboBox<String>();
 		
@@ -54,6 +52,14 @@ public class PokePanel extends JPanel
 	private void setupLayout() 
 	{
 		this.setBackground(new Color(123,3,25));
+		layout.putConstraint(SpringLayout.NORTH, imageLabel, 150, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.NORTH, fieldPanel, 25, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.WEST, fieldPanel, -300, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.SOUTH, fieldPanel, -25, SpringLayout.SOUTH, this);
+		layout.putConstraint(SpringLayout.EAST, fieldPanel, -25, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.WEST, pokedexSelector, 150, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.SOUTH, pokedexSelector, -150, SpringLayout.SOUTH, this);
+		layout.putConstraint(SpringLayout.EAST, pokedexSelector, -150, SpringLayout.WEST, fieldPanel);
 		
 	}
 
