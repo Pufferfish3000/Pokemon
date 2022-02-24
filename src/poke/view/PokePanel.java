@@ -90,5 +90,28 @@ public class PokePanel extends JPanel
 		typePane.setViewportView(typeArea);
 		typePane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		typePane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		
+		updateDisplay("");
+		
+		imageLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		imageLabel.setHorizontalTextPosition(JLabel.CENTER);
+	}
+
+	private void updateDisplay(String name)
+	{
+		String path = "/poke/view/images/";
+		String defaultName = "pokeball";
+		String extension = ".png";	
+		
+		try
+		{
+			pokemonImage = new ImageIcon(getClass().getResource(path + name + extension));
+		}
+		catch(NullPointerException missingFile)
+		{
+			pokemonImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
+		}
+		
+		imageLabel.setIcon(pokemonImage);
 	}
 }
