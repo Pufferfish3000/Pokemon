@@ -18,6 +18,7 @@ public class Controller
 		
 		this.frame = new PokeFrame(this);
 	}
+	
 	public void start()
 	{
 		
@@ -38,5 +39,17 @@ public class Controller
 		pokedex.add(new SlightlyOlderCow());
 		
 		
+	}
+	
+	public String [] buildPokedexText()
+	{
+		String [] pokedexNames = new String [pokedex.size()];
+		
+		for (int i = 0; i < pokedex.size(); i++)
+		{
+			pokedexNames[i] = i + ":" + pokedex.get(i).getName();
+		}
+		
+		return pokedexNames;
 	}
 }
