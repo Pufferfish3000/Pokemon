@@ -53,6 +53,11 @@ public abstract class Pokemon implements Serializable
 	{
 		return health;
 	}
+	
+	public int getPokedexNumber()
+	{
+		return pokedexNumber;
+	}
 
 	public boolean isCanEvolve()
 	{
