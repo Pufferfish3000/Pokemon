@@ -37,8 +37,6 @@ public class PokePanel extends JPanel
 		this.typePane = new JScrollPane();
 		this.evolveBox = new JCheckBox("Can Evolve?");
 		this.imageLabel = new JLabel("");
-		layout.putConstraint(SpringLayout.WEST, imageLabel, 150, SpringLayout.WEST, this);
-		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.EAST, fieldPanel);
 		this.pokemonImage = new ImageIcon();
 		this.pokedexSelector = new JComboBox<String>();
 		
@@ -59,6 +57,8 @@ public class PokePanel extends JPanel
 		layout.putConstraint(SpringLayout.EAST, fieldPanel, -25, SpringLayout.EAST, this);
 		layout.putConstraint(SpringLayout.WEST, pokedexSelector, 150, SpringLayout.WEST, this);
 		layout.putConstraint(SpringLayout.SOUTH, pokedexSelector, -150, SpringLayout.SOUTH, this);
+		layout.putConstraint(SpringLayout.WEST, imageLabel, 150, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.EAST, fieldPanel);
 		layout.putConstraint(SpringLayout.EAST, pokedexSelector, -150, SpringLayout.WEST, fieldPanel);
 		
 	}
