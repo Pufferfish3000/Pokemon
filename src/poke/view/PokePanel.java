@@ -69,6 +69,33 @@ public class PokePanel extends JPanel
 		
 	}
 
+	private void setUpDropDown()
+	{
+		DefaultComboBoxModel<String> pokeModel = new DefaultComboBoxModel<String>(app.buildPokedexText());
+		pokedexSelector.setModel(pokeModel);
+	}
+	
+	public void updatePokemonScreen()
+	{
+		String name = pokedexSelector.getSelectedItem().toString();
+		int nameStart = name.indexOf(": ") + 2;
+		name = name.substring(nameStart);
+		updateDisplay(name);
+		updateFields(pokedexSelector.getSelectedIndex());
+	}
+	
+	private void updateFields(int index)
+	{
+		String[] data = app.getPokemonData(index);
+		
+		nameField.setText(data[0]);
+		evolveBox.setSelected(Boolean.parseBoolean(data[1]));
+		healthField.setText(data[2]);
+		numberField.setText(data[3]);
+		typeArea.setText(data[4]);
+		
+	}
+	
 	private void setupPanel() 
 	{
 		this.setLayout(layout);

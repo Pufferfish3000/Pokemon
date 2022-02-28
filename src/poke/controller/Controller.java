@@ -70,7 +70,6 @@ public class Controller
 		}
 		
 		currentPokemonData[4] = types;
-		
 				
 		return currentPokemonData;
 	}
