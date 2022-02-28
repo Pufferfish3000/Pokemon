@@ -26,15 +26,15 @@ public class Controller
 	
 	private void createPokedex()
 	{
-		pokedex.add(new Jerry("Blue Jerry"));
-		pokedex.add(new JerryElectricBoogaloo("Excited Jerry"));
-		JerryTheThird jerry3 = new JerryTheThird(23, "Jerry on a swing");
+		pokedex.add(new Jerry("Jerry"));
+		pokedex.add(new JerryElectricBoogaloo("JerryElectricBoogaloo"));
+		JerryTheThird jerry3 = new JerryTheThird(23, "JerryTheThird");
 		pokedex.add(jerry3);
 		pokedex.add(new Jerry());
 		pokedex.add(new JerryElectricBoogaloo());
-		pokedex.add(new California("Burning California"));
-		pokedex.add(new Cow("Giant Cow"));
-		pokedex.add(new SlightlyOlderCow(123, "Slightly Bigger Than The Previous Giant Cow"));
+		pokedex.add(new California("California"));
+		pokedex.add(new Cow("Cow"));
+		pokedex.add(new SlightlyOlderCow(123, "SlightlyOlderCow"));
 		pokedex.add(new Cow());
 		pokedex.add(new SlightlyOlderCow());
 		
@@ -47,7 +47,7 @@ public class Controller
 		
 		for (int i = 0; i < pokedex.size(); i++)
 		{
-			pokedexNames[i] = i + ":" + pokedex.get(i).getName();
+			pokedexNames[i] = i + ": " + pokedex.get(i).getName();
 		}
 		
 		return pokedexNames;

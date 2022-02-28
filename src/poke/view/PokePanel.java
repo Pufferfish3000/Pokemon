@@ -28,7 +28,6 @@ public class PokePanel extends JPanel
 		
 		this.app = app;
 		this.layout = new SpringLayout();
-		
 		this.fieldPanel = new JPanel(new GridLayout(0,1));
 		
 		this.nameField = new JTextField("Pokemon Name");
@@ -37,12 +36,13 @@ public class PokePanel extends JPanel
 		this.typeArea = new JTextArea();
 		this.typePane = new JScrollPane();
 		this.evolveBox = new JCheckBox("Can Evolve?");
-		this.imageLabel = new JLabel("Image And Name");
+		this.imageLabel = new JLabel("");
 		layout.putConstraint(SpringLayout.WEST, imageLabel, 150, SpringLayout.WEST, this);
 		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.EAST, fieldPanel);
 		this.pokemonImage = new ImageIcon();
 		this.pokedexSelector = new JComboBox<String>();
 		
+		setUpDropDown();
 		setupPanel();
 		setupListeners();
 		setupLayout();
@@ -65,7 +65,7 @@ public class PokePanel extends JPanel
 
 	private void setupListeners() 
 	{
-		// TODO Auto-generated method stub
+		pokedexSelector.addActionListener(Select -> updatePokemonScreen());
 		
 	}
 
