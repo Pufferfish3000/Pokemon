@@ -17,10 +17,10 @@ public class PokePanel extends JPanel
 	private JTextArea typeArea;
 	private JScrollPane typePane;
 	private JCheckBox evolveBox;
-	
 	private JLabel imageLabel;
 	private ImageIcon pokemonImage;
 	private JComboBox<String> pokedexSelector;
+	private JButton updateButton;
 	
 	public PokePanel(Controller app)
 	{
@@ -29,7 +29,6 @@ public class PokePanel extends JPanel
 		this.app = app;
 		this.layout = new SpringLayout();
 		this.fieldPanel = new JPanel(new GridLayout(0,1));
-		
 		this.nameField = new JTextField("Pokemon Name");
 		this.numberField = new JTextField("Pokedex Number");
 		this.healthField = new JTextField("Pokemon Health");
@@ -39,6 +38,7 @@ public class PokePanel extends JPanel
 		this.imageLabel = new JLabel("");
 		this.pokemonImage = new ImageIcon();
 		this.pokedexSelector = new JComboBox<String>();
+		this.updateButton = new JButton("UPDATE POKEMON :D");
 		
 		setUpDropDown();
 		setupPanel();
@@ -106,6 +106,7 @@ public class PokePanel extends JPanel
 		fieldPanel.add(numberField);
 		fieldPanel.add(healthField);
 		fieldPanel.add(evolveBox);
+		fieldPanel.add(updateButton);
 		
 		this.add(fieldPanel);
 		this.add(imageLabel);

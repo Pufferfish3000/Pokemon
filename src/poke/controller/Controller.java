@@ -73,4 +73,12 @@ public class Controller
 				
 		return currentPokemonData;
 	}
+
+	public void updateCurrentPokemon(String name, int index, int health, boolean evolve)
+	{
+		Pokemon current = pokedex.get(index);
+		current.setName(name);
+		current.setCanEvolve(evolve);
+		current.setHealth(health);
+	}
 }
